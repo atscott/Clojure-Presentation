@@ -109,31 +109,31 @@
             <section>
                 <h3>Homoiconicity Example</h3>
 				<pre><code data-trim>
-                    (+ 2 4)
-                    ; => 6
+(+ 2 4)
+; => 6
                 </code></pre>
                 <aside class="notes">
                     This adds 2 and 4 but it is also list of 3 items in a valid data structure.
                 </aside>
 				<pre class="fragment"><code data-trim>
-                    (def example (list '+ (+ 1 1) (+ 2 2)))
-                    ; => (+ 2 4)
+(def example (list '+ (+ 1 1) (+ 2 2)))
+; => (+ 2 4)
                 </code></pre>
                 <pre class="fragment"><code>
-                    (butlast example)
-                    ; => (+ 2)
+(butlast example)
+; => (+ 2)
                 </code></pre>
                 <pre class="fragment"><code>
-                    (eval (concat (butlast example) [2]))
-                    ; => 4
+(eval (concat (butlast example) [2]))
+; => 4
                 </code></pre>
                 <pre class="fragment"><code>
-                    (read-string "(+ 2 4)")
-                    ; => (+ 2 4)
+(read-string "(+ 2 4)")
+; => (+ 2 4)
                 </code></pre>
                 <pre class="fragment"><code>
-                    (eval (read-string "(+ 2 4)"))
-                    ; => 6
+(eval (read-string "(+ 2 4)"))
+; => 6
                 </code></pre>
 
             </section>
